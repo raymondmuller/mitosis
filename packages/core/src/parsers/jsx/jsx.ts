@@ -132,7 +132,9 @@ export function parseJsx(
           },
           JSXElement(path) {
             const { node } = path;
+            console.log({ node });
             path.replaceWith(jsonToAst(jsxElementToJson(node)));
+            console.log({ path });
           },
           ExportNamedDeclaration(path, context) {
             const { node } = path;

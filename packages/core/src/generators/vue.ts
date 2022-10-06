@@ -484,8 +484,10 @@ export const blockToVue: BlockRenderer = (node, options, scope) => {
 
   str += `<${node.name} `;
 
-  if (node.bindings._spread?.code) {
-    str += `v-bind="${encodeQuotes(stripStateAndPropsRefs(node.bindings._spread.code as string))}"`;
+  if (node.bindings._spread?.length) {
+    node.bindings._spread.forEach((spread) => {
+      str += `v-bind="${encodeQuotes(stripStateAndPropsRefs(spread.code as string))}"`;
+    });
   }
 
   for (const key in node.properties) {

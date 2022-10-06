@@ -64,8 +64,10 @@ export const blockToMitosis = (
 
   str += `<${json.name} `;
 
-  if (json.bindings._spread?.code) {
-    str += ` {...(${json.bindings._spread.code})} `;
+  if (json.bindings._spread?.length) {
+    json.bindings._spread.forEach((spread) => {
+      str += ` {...(${spread.code})} `;
+    });
   }
 
   for (const key in json.properties) {

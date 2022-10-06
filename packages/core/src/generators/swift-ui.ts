@@ -43,7 +43,7 @@ const mappers: {
         json.bindings.placeholder
           ? processBinding(json.bindings.placeholder?.code as string, options)
           : json.properties.placeholder
-          ? JSON.stringify(json.bindings.placeholder!.code)
+          ? JSON.stringify(json.bindings.placeholder!['code'])
           : '""'
       }, text: $${name})` +
       getStyleString(json, options) +

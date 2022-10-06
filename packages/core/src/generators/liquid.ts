@@ -92,15 +92,16 @@ const blockToLiquid = (json: MitosisNode, options: ToLiquidOptions = {}): string
   } else {
     str += `<${json.name} `;
 
-    if (
-      json.bindings._spread?.code === '_spread' &&
-      isValidLiquidBinding(json.bindings._spread.code)
-    ) {
-      str += `
-          {% for _attr in ${json.bindings._spread.code} %}
+    if (json.bindings._spread?.length) {
+      json.bindings._spread.forEach((spread) => {
+        if (isValidLiquidBinding(spread.code)) {
+          str += `
+          {% for _attr in ${spread.code} %}
             {{ _attr[0] }}="{{ _attr[1] }}"
           {% endfor %}
         `;
+        }
+      });
     }
 
     for (const key in json.properties) {

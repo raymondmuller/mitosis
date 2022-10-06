@@ -161,8 +161,10 @@ export const blockToReact = (json: MitosisNode, options: ToReactOptions, parentS
 
   str += `<${json.name} `;
 
-  if (json.bindings._spread?.code) {
-    str += ` {...(${processBinding(json.bindings._spread.code as string, options)})} `;
+  if (json.bindings._spread?.length) {
+    json.bindings._spread.forEach((spread) => {
+      str += ` {...(${processBinding(spread.code as string, options)})} `;
+    });
   }
 
   for (const key in json.properties) {

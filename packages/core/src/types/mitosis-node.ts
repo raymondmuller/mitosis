@@ -1,5 +1,7 @@
 import { JSONObject } from './json';
 
+export type MitosisNodeBinding = { code: string; arguments?: string[] };
+
 export type BaseNode = {
   '@type': '@builder.io/mitosis/node';
   meta: JSONObject;
@@ -28,8 +30,8 @@ export type BaseNode = {
    * ```
    */
   bindings: {
-    [key: string]: { code: string; arguments?: string[] } | undefined;
-  };
+    [key: string]: MitosisNodeBinding;
+  } & { _spread?: Array<MitosisNodeBinding> };
   children: MitosisNode[];
 };
 

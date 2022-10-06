@@ -1,4 +1,5 @@
 import { format } from 'prettier/standalone';
+import { MitosisNode } from 'src/types/mitosis-node';
 import { convertExportDefaultToReturn } from '../../parsers/builder';
 import { stableJSONserialize } from './stable-serialize';
 export interface SrcBuilderOptions {
@@ -305,10 +306,14 @@ export class SrcBuilder {
     }
     for (const rawKey in bindings) {
       if (rawKey === '_spread') {
-        if (this.isJSX) {
-          this.emit('{...', bindings[rawKey].code, '}');
-        } else {
-          this.emit('...', bindings[rawKey].code);
+        if (bindings._spread?.length) {
+          bindings._spread.forEach((spread: MitosisNode['bindings']) => {
+            if (this.isJSX) {
+              this.emit('{...', spread.code, '}');
+            } else {
+              this.emit('...', spread.code);
+            }
+          });
         }
       } else if (Object.prototype.hasOwnProperty.call(bindings, rawKey) && !ignoreKey(rawKey)) {
         let binding = bindings[rawKey];

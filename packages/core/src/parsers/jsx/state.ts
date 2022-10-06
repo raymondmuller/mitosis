@@ -14,6 +14,7 @@ import { parseCodeJson, uncapitalize } from './helpers';
 import { flow, pipe } from 'fp-ts/lib/function';
 import { JSONObject } from '../../types/json';
 import { mapJsonObjectToStateValue } from '../helpers/state';
+import { MitosisNodeBinding } from 'src/types/mitosis-node';
 
 const { types } = babel;
 
@@ -70,11 +71,19 @@ export function mapStateIdentifiers(json: MitosisComponent) {
         const value = item.bindings[key];
 
         if (value) {
-          item.bindings[key] = {
-            code: mapStateIdentifiersInExpression(value.code as string, stateProperties),
-          };
-          if (value.arguments?.length) {
-            item.bindings[key]!.arguments = value.arguments;
+          if (key !== '_spread') {
+            item.bindings[key] = {
+              code: mapStateIdentifiersInExpression(value.code as string, stateProperties),
+            };
+            if (value.arguments?.length) {
+              item.bindings[key]!.arguments = value.arguments;
+            }
+          } else if (item.bindings._spread?.length) {
+            item.bindings._spread = item.bindings._spread.map((spread: MitosisNodeBinding) => {
+              return {
+                code: mapStateIdentifiersInExpression(spread.code as string, stateProperties),
+              };
+            });
           }
         }
       }

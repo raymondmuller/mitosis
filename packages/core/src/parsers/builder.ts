@@ -253,7 +253,7 @@ const componentMappers: {
             content: block.component?.options.symbol.content,
           }),
         },
-        ...actionBindings,
+        ...omit(actionBindings, '_spread'),
         ...(styleString && {
           style: { code: styleString },
         }),
@@ -287,7 +287,7 @@ const componentMappers: {
                   content: content, // TODO: convert to <SymbolInternal>...</SymbolInternal> so can be parsed
                 }),
               },
-              ...actionBindings,
+              ...omit(actionBindings, '_spread'),
               ...(styleString && {
                 style: { code: styleString },
               }),

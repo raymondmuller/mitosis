@@ -80,8 +80,10 @@ const blockToLit = (json: MitosisNode, options: ToLitOptions = {}): string => {
     str += ` class=${classString} `;
   }
 
-  if (json.bindings._spread?.code) {
-    str += ` \${spread(${json.bindings._spread.code})} `;
+  if (json.bindings._spread?.length) {
+    json.bindings._spread.forEach((spread) => {
+      str += ` \${spread(${spread.code})} `;
+    });
   }
 
   for (const key in json.properties) {
