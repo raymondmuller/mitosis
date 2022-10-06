@@ -2177,6 +2177,19 @@ export default class MultipleOnUpdateWithDeps {
 "
 `;
 
+exports[`Angular with Preserve Imports and File Extensions Javascript Test multipleSpread 1`] = `
+"import { Component } from \\"@angular/core\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+})
+export default class MyBasicOutputsComponent {}
+"
+`;
+
 exports[`Angular with Preserve Imports and File Extensions Javascript Test nestedShow 1`] = `
 "import { Component, Input } from \\"@angular/core\\";
 
@@ -4885,6 +4898,19 @@ export default class MultipleOnUpdateWithDeps {
     }
   }
 }
+"
+`;
+
+exports[`Angular with Preserve Imports and File Extensions Typescript Test multipleSpread 1`] = `
+"import { Component } from \\"@angular/core\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+})
+export default class MyBasicOutputsComponent {}
 "
 `;
 

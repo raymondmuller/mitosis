@@ -4501,6 +4501,35 @@ export default class MultipleOnUpdateWithDeps {
 "
 `;
 
+exports[`Angular Javascript Test multipleSpread 1`] = `
+"import { Component } from \\"@angular/core\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+})
+export default class MyBasicOutputsComponent {}
+"
+`;
+
+exports[`Angular Javascript Test multipleSpread 2`] = `
+"import { Component } from \\"@angular/core\\";
+import { CommonModule } from \\"@angular/common\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+  standalone: true,
+  imports: [CommonModule],
+})
+export default class MyBasicOutputsComponent {}
+"
+`;
+
 exports[`Angular Javascript Test nestedShow 1`] = `
 "import { Component, Input } from \\"@angular/core\\";
 
@@ -10130,6 +10159,35 @@ export default class MultipleOnUpdateWithDeps {
     }
   }
 }
+"
+`;
+
+exports[`Angular Typescript Test multipleSpread 1`] = `
+"import { Component } from \\"@angular/core\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+})
+export default class MyBasicOutputsComponent {}
+"
+`;
+
+exports[`Angular Typescript Test multipleSpread 2`] = `
+"import { Component } from \\"@angular/core\\";
+import { CommonModule } from \\"@angular/common\\";
+
+@Component({
+  selector: \\"my-basic-outputs-component, MyBasicOutputsComponent\\",
+  template: \`
+    <input />
+  \`,
+  standalone: true,
+  imports: [CommonModule],
+})
+export default class MyBasicOutputsComponent {}
 "
 `;
 

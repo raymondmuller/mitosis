@@ -404,15 +404,13 @@ exports[`Marko Javascript Test Button 1`] = `
 <div>
   <if(input.link)>
     <a
-      ...(props.attributes)
       href=(input.link)
       target=(input.openLinkInNewTab ? '_blank' : undefined)
     >
       \${input.text}
     </a></if>
 
-  <if(!input.link)>
-    <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>
+  <if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>
 </div>"
 `;
 
@@ -866,14 +864,13 @@ class {
 }
 
 style { 
-  .pre-5bf2897a {
+  .pre-00d0b312 {
     padding: 10px;
     color: red;
     text-align: center;
   }
 }
 <form
-  ...(props.attributes)
   validate=(input.validate)
   key=\\"formRef\\"
   action=(!input.sendWithJs && input.action)
@@ -902,7 +899,7 @@ style {
     ></BuilderBlocks></if>
 
   <if(component.submissionState === 'error' && state.responseData)>
-    <pre class=\\"builder-form-error-text pre-5bf2897a\\">
+    <pre class=\\"builder-form-error-text pre-00d0b312\\">
           
 \${JSON.stringify(state.responseData, null, 2)}
 
@@ -1019,7 +1016,6 @@ exports[`Marko Javascript Test Img 1`] = `
 class {}
 
 <img
-  ...(props.attributes)
   style=({
   objectFit: input.backgroundSize || 'cover',
   objectPosition: input.backgroundPosition || 'center'
@@ -1036,7 +1032,6 @@ exports[`Marko Javascript Test Input 1`] = `
 class {}
 
 <input
-  ...(props.attributes)
   key=(Builder.isEditing && input.defaultValue ? input.defaultValue : 'default-key')
   placeholder=(input.placeholder)
   type=(input.type)
@@ -1058,7 +1053,6 @@ exports[`Marko Javascript Test Section 1`] = `
 "class {}
 
 <section
-  ...(props.attributes)
   style=(input.maxWidth && typeof input.maxWidth === 'number' ? {
   maxWidth: input.maxWidth
 } : undefined)
@@ -1076,12 +1070,9 @@ exports[`Marko Javascript Test Section 2`] = `
 
 <if(state.max)>
   <for|item| of=(state.items)>
-    <section
-      ...(props.attributes)
-      style=({
+    <section style=({
   maxWidth: item + state.max
-})
-    >
+})>
       \${input.children}
     </section>
   </for></if>"
@@ -1093,7 +1084,6 @@ exports[`Marko Javascript Test Select 1`] = `
 class {}
 
 <select
-  ...(props.attributes)
   value=(input.value)
   key=(Builder.isEditing && input.defaultValue ? input.defaultValue : 'default-key')
   defaultValue=(input.defaultValue)
@@ -1223,7 +1213,7 @@ style {
 exports[`Marko Javascript Test Submit 1`] = `
 "class {}
 
-<button ...(props.attributes) type=\\"submit\\">\${input.text}</button>"
+<button type=\\"submit\\">\${input.text}</button>"
 `;
 
 exports[`Marko Javascript Test Text 1`] = `
@@ -1251,7 +1241,6 @@ exports[`Marko Javascript Test Textarea 1`] = `
 "class {}
 
 <textarea
-  ...(props.attributes)
   placeholder=(input.placeholder)
   name=(input.name)
   value=(input.value)
@@ -1263,7 +1252,6 @@ exports[`Marko Javascript Test Video 1`] = `
 "class {}
 
 <video
-  ...(props.attributes)
   preload=\\"none\\"
   style=({
   width: '100%',
@@ -1439,15 +1427,13 @@ exports[`Marko Javascript Test defaultProps 1`] = `
 <div>
   <if(input.link)>
     <a
-      ...(props.attributes)
       href=(input.link)
       target=(input.openLinkInNewTab ? '_blank' : undefined)
     >
       \${input.text}
     </a></if>
 
-  <if(!input.link)>
-    <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>
+  <if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>
 </div>"
 `;
 
@@ -1473,10 +1459,7 @@ class {
   }
 }
 
-<RenderBlock
-  ...(state.getRenderContentProps(props.renderContentProps.block,
-  0))
-></RenderBlock>"
+<RenderBlock></RenderBlock>"
 `;
 
 exports[`Marko Javascript Test multipleOnUpdate 1`] = `
@@ -1513,6 +1496,12 @@ exports[`Marko Javascript Test multipleOnUpdateWithDeps 1`] = `
 }
 
 <div></div>"
+`;
+
+exports[`Marko Javascript Test multipleSpread 1`] = `
+"class {}
+
+<input />"
 `;
 
 exports[`Marko Javascript Test nestedShow 1`] = `
@@ -1661,15 +1650,13 @@ exports[`Marko Javascript Test rootFragmentMultiNode 1`] = `
 
 <if(input.link)>
   <a
-    ...(props.attributes)
     href=(input.link)
     target=(input.openLinkInNewTab ? '_blank' : undefined)
   >
     \${input.text}
   </a></if>
 
-<if(!input.link)>
-  <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>"
+<if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>"
 `;
 
 exports[`Marko Javascript Test rootShow 1`] = `
@@ -2115,15 +2102,13 @@ exports[`Marko Typescript Test Button 1`] = `
 <div>
   <if(input.link)>
     <a
-      ...(props.attributes)
       href=(input.link)
       target=(input.openLinkInNewTab ? '_blank' : undefined)
     >
       \${input.text}
     </a></if>
 
-  <if(!input.link)>
-    <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>
+  <if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>
 </div>"
 `;
 
@@ -2577,14 +2562,13 @@ class {
 }
 
 style { 
-  .pre-2e32b23f {
+  .pre-3c1c5672 {
     padding: 10px;
     color: red;
     text-align: center;
   }
 }
 <form
-  ...(props.attributes)
   validate=(input.validate)
   key=\\"formRef\\"
   action=(!input.sendWithJs && input.action)
@@ -2613,7 +2597,7 @@ style {
     ></BuilderBlocks></if>
 
   <if(component.submissionState === 'error' && state.responseData)>
-    <pre class=\\"builder-form-error-text pre-2e32b23f\\">
+    <pre class=\\"builder-form-error-text pre-3c1c5672\\">
           
 \${JSON.stringify(state.responseData, null, 2)}
 
@@ -2730,7 +2714,6 @@ exports[`Marko Typescript Test Img 1`] = `
 class {}
 
 <img
-  ...(props.attributes)
   style=({
   objectFit: input.backgroundSize || 'cover',
   objectPosition: input.backgroundPosition || 'center'
@@ -2747,7 +2730,6 @@ exports[`Marko Typescript Test Input 1`] = `
 class {}
 
 <input
-  ...(props.attributes)
   key=(Builder.isEditing && input.defaultValue ? input.defaultValue : 'default-key')
   placeholder=(input.placeholder)
   type=(input.type)
@@ -2769,7 +2751,6 @@ exports[`Marko Typescript Test Section 1`] = `
 "class {}
 
 <section
-  ...(props.attributes)
   style=(input.maxWidth && typeof input.maxWidth === 'number' ? {
   maxWidth: input.maxWidth
 } : undefined)
@@ -2787,12 +2768,9 @@ exports[`Marko Typescript Test Section 2`] = `
 
 <if(state.max)>
   <for|item| of=(state.items)>
-    <section
-      ...(props.attributes)
-      style=({
+    <section style=({
   maxWidth: item + state.max
-})
-    >
+})>
       \${input.children}
     </section>
   </for></if>"
@@ -2804,7 +2782,6 @@ exports[`Marko Typescript Test Select 1`] = `
 class {}
 
 <select
-  ...(props.attributes)
   value=(input.value)
   key=(Builder.isEditing && input.defaultValue ? input.defaultValue : 'default-key')
   defaultValue=(input.defaultValue)
@@ -2934,7 +2911,7 @@ style {
 exports[`Marko Typescript Test Submit 1`] = `
 "class {}
 
-<button ...(props.attributes) type=\\"submit\\">\${input.text}</button>"
+<button type=\\"submit\\">\${input.text}</button>"
 `;
 
 exports[`Marko Typescript Test Text 1`] = `
@@ -2962,7 +2939,6 @@ exports[`Marko Typescript Test Textarea 1`] = `
 "class {}
 
 <textarea
-  ...(props.attributes)
   placeholder=(input.placeholder)
   name=(input.name)
   value=(input.value)
@@ -2974,7 +2950,6 @@ exports[`Marko Typescript Test Video 1`] = `
 "class {}
 
 <video
-  ...(props.attributes)
   preload=\\"none\\"
   style=({
   width: '100%',
@@ -3150,15 +3125,13 @@ exports[`Marko Typescript Test defaultProps 1`] = `
 <div>
   <if(input.link)>
     <a
-      ...(props.attributes)
       href=(input.link)
       target=(input.openLinkInNewTab ? '_blank' : undefined)
     >
       \${input.text}
     </a></if>
 
-  <if(!input.link)>
-    <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>
+  <if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>
 </div>"
 `;
 
@@ -3185,10 +3158,7 @@ class {
   }
 }
 
-<RenderBlock
-  ...(state.getRenderContentProps(props.renderContentProps.block,
-  0))
-></RenderBlock>"
+<RenderBlock></RenderBlock>"
 `;
 
 exports[`Marko Typescript Test multipleOnUpdate 1`] = `
@@ -3225,6 +3195,12 @@ exports[`Marko Typescript Test multipleOnUpdateWithDeps 1`] = `
 }
 
 <div></div>"
+`;
+
+exports[`Marko Typescript Test multipleSpread 1`] = `
+"class {}
+
+<input />"
 `;
 
 exports[`Marko Typescript Test nestedShow 1`] = `
@@ -3373,15 +3349,13 @@ exports[`Marko Typescript Test rootFragmentMultiNode 1`] = `
 
 <if(input.link)>
   <a
-    ...(props.attributes)
     href=(input.link)
     target=(input.openLinkInNewTab ? '_blank' : undefined)
   >
     \${input.text}
   </a></if>
 
-<if(!input.link)>
-  <button ...(props.attributes) type=\\"button\\">\${input.text}</button></if>"
+<if(!input.link)> <button type=\\"button\\">\${input.text}</button></if>"
 `;
 
 exports[`Marko Typescript Test rootShow 1`] = `

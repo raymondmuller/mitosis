@@ -1950,6 +1950,20 @@ export default class RenderContent {
 "
 `;
 
+exports[`Stencil Javascript Test multipleSpread 1`] = `
+"import { Component, Prop, h, State, Fragment } from \\"@stencil/core\\";
+
+@Component({
+  tag: \\"my-basic-outputs-component\\",
+})
+export default class MyBasicOutputsComponent {
+  render() {
+    return <input {...props} {...attrs} />;
+  }
+}
+"
+`;
+
 exports[`Stencil Javascript Test nestedStyles 1`] = `
 "import { Component, Prop, h, State, Fragment } from \\"@stencil/core\\";
 
@@ -4340,6 +4354,20 @@ export default class RenderContent {
         {...state.getRenderContentProps(props.renderContentProps.block, 0)}
       ></RenderBlock>
     );
+  }
+}
+"
+`;
+
+exports[`Stencil Typescript Test multipleSpread 1`] = `
+"import { Component, Prop, h, State, Fragment } from \\"@stencil/core\\";
+
+@Component({
+  tag: \\"my-basic-outputs-component\\",
+})
+export default class MyBasicOutputsComponent {
+  render() {
+    return <input {...props} {...attrs} />;
   }
 }
 "

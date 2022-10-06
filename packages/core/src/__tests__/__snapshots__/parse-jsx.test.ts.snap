@@ -2141,9 +2141,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
                 "href": Object {
                   "code": "props.link",
                 },
@@ -2248,9 +2250,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
               },
               "children": Array [
                 Object {
@@ -3186,9 +3190,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "action": Object {
           "code": "!props.sendWithJs && props.action",
         },
@@ -4385,9 +4391,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "alt": Object {
           "code": "props.altText",
         },
@@ -4451,9 +4459,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "defaultValue": Object {
           "code": "props.defaultValue",
         },
@@ -4641,9 +4651,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "style": Object {
           "code": "props.maxWidth && typeof props.maxWidth === 'number' ? {
   maxWidth: props.maxWidth
@@ -4754,9 +4766,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
                 "style": Object {
                   "code": "{
   maxWidth: item + state.max
@@ -4876,9 +4890,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "defaultValue": Object {
           "code": "props.defaultValue",
         },
@@ -5795,9 +5811,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
       },
       "children": Array [
         Object {
@@ -5940,9 +5958,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "defaultValue": Object {
           "code": "props.defaultValue",
         },
@@ -5996,9 +6016,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "props.attributes",
-        },
+        "_spread": Array [
+          Object {
+            "code": "props.attributes",
+          },
+        ],
         "autoplay": Object {
           "code": "props.autoPlay",
         },
@@ -6944,9 +6966,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
                 "href": Object {
                   "code": "props.link",
                 },
@@ -7051,9 +7075,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
               },
               "children": Array [
                 Object {
@@ -7244,9 +7270,11 @@ Object {
     Object {
       "@type": "@builder.io/mitosis/node",
       "bindings": Object {
-        "_spread": Object {
-          "code": "state.getRenderContentProps(props.renderContentProps.block, 0)",
-        },
+        "_spread": Array [
+          Object {
+            "code": "state.getRenderContentProps(props.renderContentProps.block, 0)",
+          },
+        ],
       },
       "children": Array [],
       "meta": Object {},
@@ -7339,9 +7367,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
                 "href": Object {
                   "code": "props.link",
                 },
@@ -7446,9 +7476,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
               },
               "children": Array [
                 Object {
@@ -7675,6 +7707,46 @@ Object {
       "type": "property",
     },
   },
+  "subComponents": Array [],
+}
+`;
+
+exports[`Parse JSX multipleSpread 1`] = `
+Object {
+  "@type": "@builder.io/mitosis/component",
+  "children": Array [
+    Object {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": Object {
+        "_spread": Array [
+          Object {
+            "code": "props",
+          },
+          Object {
+            "code": "attrs",
+          },
+        ],
+      },
+      "children": Array [],
+      "meta": Object {},
+      "name": "input",
+      "properties": Object {},
+      "scope": Object {},
+    },
+  ],
+  "context": Object {
+    "get": Object {},
+    "set": Object {},
+  },
+  "exports": Object {},
+  "hooks": Object {},
+  "imports": Array [],
+  "inputs": Array [],
+  "meta": Object {},
+  "name": "MyBasicOutputsComponent",
+  "propsTypeRef": "any",
+  "refs": Object {},
+  "state": Object {},
   "subComponents": Array [],
 }
 `;
@@ -8777,9 +8849,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
                 "href": Object {
                   "code": "props.link",
                 },
@@ -8884,9 +8958,11 @@ Object {
             Object {
               "@type": "@builder.io/mitosis/node",
               "bindings": Object {
-                "_spread": Object {
-                  "code": "props.attributes",
-                },
+                "_spread": Array [
+                  Object {
+                    "code": "props.attributes",
+                  },
+                ],
               },
               "children": Array [
                 Object {

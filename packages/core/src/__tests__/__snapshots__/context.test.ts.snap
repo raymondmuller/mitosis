@@ -102,9 +102,11 @@ Object {
         Object {
           "@type": "@builder.io/mitosis/node",
           "bindings": Object {
-            "_spread": Object {
-              "code": "state.properties",
-            },
+            "_spread": Array [
+              Object {
+                "code": "state.properties",
+              },
+            ],
             "style": Object {
               "code": "state.css",
             },
@@ -158,9 +160,11 @@ Object {
                 Object {
                   "@type": "@builder.io/mitosis/node",
                   "bindings": Object {
-                    "_spread": Object {
-                      "code": "state.componentOptions",
-                    },
+                    "_spread": Array [
+                      Object {
+                        "code": "state.componentOptions",
+                      },
+                    ],
                     "children": Object {
                       "code": "state.useBlock.children",
                     },
@@ -555,14 +559,11 @@ export default function RenderBlock(props: RenderBlockProps) {
 
   return (
     <>
-      <TagNameRef {...properties()} style={css()}>
+      <TagNameRef style={css()}>
         <BlockStyles block={useBlock()} />
 
         {componentRef() ? (
-          <ComponentRefRef
-            {...componentOptions()}
-            children={useBlock().children}
-          />
+          <ComponentRefRef children={useBlock().children} />
         ) : null}
 
         {!componentRef() &&

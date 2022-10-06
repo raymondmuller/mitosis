@@ -1591,6 +1591,14 @@ exports[`Svelte Javascript Test multipleOnUpdateWithDeps 1`] = `
 "
 `;
 
+exports[`Svelte Javascript Test multipleSpread 1`] = `
+"<script>
+</script>
+
+<input {...props} {...attrs} />
+"
+`;
+
 exports[`Svelte Javascript Test nestedShow 1`] = `
 "<script>
   export let conditionA;
@@ -3819,6 +3827,14 @@ exports[`Svelte Typescript Test multipleOnUpdateWithDeps 1`] = `
 </script>
 
 <div />
+"
+`;
+
+exports[`Svelte Typescript Test multipleSpread 1`] = `
+"<script lang=\\"ts\\">
+</script>
+
+<input {...props} {...attrs} />
 "
 `;
 

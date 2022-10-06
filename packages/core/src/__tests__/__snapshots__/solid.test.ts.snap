@@ -2072,7 +2072,7 @@ function FormComponent(props) {
           ></BuilderBlocks>
         </Show>
         <Show when={submissionState() === \\"error\\" && responseData()}>
-          <pre class=\\"builder-form-error-text pre-5bf2897a\\">
+          <pre class=\\"builder-form-error-text pre-00d0b312\\">
             {JSON.stringify(responseData(), null, 2)}
           </pre>
         </Show>
@@ -2084,7 +2084,7 @@ function FormComponent(props) {
         </Show>
       </form>
       <style jsx>{\`
-        .pre-5bf2897a {
+        .pre-00d0b312 {
           padding: 10px;
           color: red;
           text-align: center;
@@ -3577,7 +3577,7 @@ function RenderContent(props) {
 
   return (
     <RenderBlock
-      {...getRenderContentProps(props.renderContentProps.block, 0)}
+      {...state.getRenderContentProps(props.renderContentProps.block, 0)}
     ></RenderBlock>
   );
 }
@@ -3604,7 +3604,7 @@ function RenderContent(props) {
   return (
     <>
       <RenderBlock
-        {...getRenderContentProps(props.renderContentProps.block, 0)}
+        {...state.getRenderContentProps(props.renderContentProps.block, 0)}
       ></RenderBlock>
     </>
   );
@@ -3719,6 +3719,30 @@ function MultipleOnUpdateWithDeps(props) {
 }
 
 export default MultipleOnUpdateWithDeps;
+"
+`;
+
+exports[`Solid Javascript Test multipleSpread 1`] = `
+"function MyBasicOutputsComponent(props) {
+  return <input {...props} {...attrs} />;
+}
+
+export default MyBasicOutputsComponent;
+"
+`;
+
+exports[`Solid Javascript Test multipleSpread 2`] = `
+"import { css } from \\"solid-styled-components\\";
+
+function MyBasicOutputsComponent(props) {
+  return (
+    <>
+      <input {...props} {...attrs} />
+    </>
+  );
+}
+
+export default MyBasicOutputsComponent;
 "
 `;
 
@@ -6660,7 +6684,7 @@ function FormComponent(props) {
           ></BuilderBlocks>
         </Show>
         <Show when={submissionState() === \\"error\\" && responseData()}>
-          <pre class=\\"builder-form-error-text pre-2e32b23f\\">
+          <pre class=\\"builder-form-error-text pre-3c1c5672\\">
             {JSON.stringify(responseData(), null, 2)}
           </pre>
         </Show>
@@ -6672,7 +6696,7 @@ function FormComponent(props) {
         </Show>
       </form>
       <style jsx>{\`
-        .pre-2e32b23f {
+        .pre-3c1c5672 {
           padding: 10px;
           color: red;
           text-align: center;
@@ -8166,7 +8190,7 @@ function RenderContent(props) {
 
   return (
     <RenderBlock
-      {...getRenderContentProps(props.renderContentProps.block, 0)}
+      {...state.getRenderContentProps(props.renderContentProps.block, 0)}
     ></RenderBlock>
   );
 }
@@ -8194,7 +8218,7 @@ function RenderContent(props) {
   return (
     <>
       <RenderBlock
-        {...getRenderContentProps(props.renderContentProps.block, 0)}
+        {...state.getRenderContentProps(props.renderContentProps.block, 0)}
       ></RenderBlock>
     </>
   );
@@ -8309,6 +8333,30 @@ function MultipleOnUpdateWithDeps(props) {
 }
 
 export default MultipleOnUpdateWithDeps;
+"
+`;
+
+exports[`Solid Typescript Test multipleSpread 1`] = `
+"function MyBasicOutputsComponent(props) {
+  return <input {...props} {...attrs} />;
+}
+
+export default MyBasicOutputsComponent;
+"
+`;
+
+exports[`Solid Typescript Test multipleSpread 2`] = `
+"import { css } from \\"solid-styled-components\\";
+
+function MyBasicOutputsComponent(props) {
+  return (
+    <>
+      <input {...props} {...attrs} />
+    </>
+  );
+}
+
+export default MyBasicOutputsComponent;
 "
 `;
 

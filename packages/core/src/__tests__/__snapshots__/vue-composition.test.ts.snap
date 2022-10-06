@@ -1880,6 +1880,15 @@ watch([a.value, b.value], ([a, b]) => {
 "
 `;
 
+exports[`Vue Javascript Test multipleSpread 1`] = `
+"<template>
+  <input v-bind=\\"props\\" v-bind=\\"attrs\\" />
+</template>
+
+<script setup></script>
+"
+`;
+
 exports[`Vue Javascript Test nestedShow 1`] = `
 "<template>
   <template v-if=\\"conditionA\\">
@@ -4314,6 +4323,15 @@ watch([a.value, b.value], ([a, b]) => {
     }
   });
 </script>
+"
+`;
+
+exports[`Vue Typescript Test multipleSpread 1`] = `
+"<template>
+  <input v-bind=\\"props\\" v-bind=\\"attrs\\" />
+</template>
+
+<script setup lang=\\"ts\\"></script>
 "
 `;
 

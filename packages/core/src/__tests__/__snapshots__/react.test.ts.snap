@@ -440,7 +440,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -451,9 +450,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </div>
@@ -970,7 +967,6 @@ export default function FormComponent(props: FormProps) {
     <>
       {\\" \\"}
       <form
-        {...props.attributes}
         validate={props.validate}
         ref={formRef}
         action={!props.sendWithJs && props.action}
@@ -1203,7 +1199,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function ImgComponent(props: ImgProps) {
   return (
     <img
-      {...props.attributes}
       style={{
         objectFit: props.backgroundSize || \\"cover\\",
         objectPosition: props.backgroundPosition || \\"center\\",
@@ -1235,7 +1230,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function FormInputComponent(props: FormInputProps) {
   return (
     <input
-      {...props.attributes}
       key={
         Builder.isEditing && props.defaultValue
           ? props.defaultValue
@@ -1284,7 +1278,6 @@ export interface SectionProps {
 export default function SectionComponent(props: SectionProps) {
   return (
     <section
-      {...props.attributes}
       style={
         props.maxWidth && typeof props.maxWidth === \\"number\\"
           ? {
@@ -1319,7 +1312,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function SelectComponent(props: FormSelectProps) {
   return (
     <select
-      {...props.attributes}
       value={props.value}
       key={
         Builder.isEditing && props.defaultValue
@@ -1497,11 +1489,7 @@ export interface ButtonProps {
 }
 
 export default function SubmitButton(props: ButtonProps) {
-  return (
-    <button {...props.attributes} type=\\"submit\\">
-      {props.text}
-    </button>
-  );
+  return <button type=\\"submit\\">{props.text}</button>;
 }
 "
 `;
@@ -1556,7 +1544,6 @@ export interface TextareaProps {
 export default function Textarea(props: TextareaProps) {
   return (
     <textarea
-      {...props.attributes}
       placeholder={props.placeholder}
       name={props.name}
       value={props.value}
@@ -1599,7 +1586,6 @@ export interface VideoProps {
 export default function Video(props: VideoProps) {
   return (
     <video
-      {...props.attributes}
       preload=\\"none\\"
       style={{
         width: \\"100%\\",
@@ -1853,7 +1839,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -1864,9 +1849,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </div>
@@ -1922,11 +1905,7 @@ export default function RenderContent(props: RenderContentProps) {
     };
   }
 
-  return (
-    <RenderBlock
-      {...getRenderContentProps(props.renderContentProps.block, 0)}
-    />
-  );
+  return <RenderBlock />;
 }
 "
 `;
@@ -1977,6 +1956,15 @@ export default function MultipleOnUpdateWithDeps(props: any) {
   }, [c, d]);
 
   return <div />;
+}
+"
+`;
+
+exports[`React Javascript Test multipleSpread 1`] = `
+"import * as React from \\"react\\";
+
+export default function MyBasicOutputsComponent(props: any) {
+  return <input />;
 }
 "
 `;
@@ -2274,7 +2262,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -2285,9 +2272,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </>
@@ -2916,7 +2901,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -2927,9 +2911,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </div>
@@ -3446,7 +3428,6 @@ export default function FormComponent(props: FormProps) {
     <>
       {\\" \\"}
       <form
-        {...props.attributes}
         validate={props.validate}
         ref={formRef}
         action={!props.sendWithJs && props.action}
@@ -3679,7 +3660,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function ImgComponent(props: ImgProps) {
   return (
     <img
-      {...props.attributes}
       style={{
         objectFit: props.backgroundSize || \\"cover\\",
         objectPosition: props.backgroundPosition || \\"center\\",
@@ -3711,7 +3691,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function FormInputComponent(props: FormInputProps) {
   return (
     <input
-      {...props.attributes}
       key={
         Builder.isEditing && props.defaultValue
           ? props.defaultValue
@@ -3760,7 +3739,6 @@ export interface SectionProps {
 export default function SectionComponent(props: SectionProps) {
   return (
     <section
-      {...props.attributes}
       style={
         props.maxWidth && typeof props.maxWidth === \\"number\\"
           ? {
@@ -3795,7 +3773,6 @@ import { Builder } from \\"@builder.io/sdk\\";
 export default function SelectComponent(props: FormSelectProps) {
   return (
     <select
-      {...props.attributes}
       value={props.value}
       key={
         Builder.isEditing && props.defaultValue
@@ -3973,11 +3950,7 @@ export interface ButtonProps {
 }
 
 export default function SubmitButton(props: ButtonProps) {
-  return (
-    <button {...props.attributes} type=\\"submit\\">
-      {props.text}
-    </button>
-  );
+  return <button type=\\"submit\\">{props.text}</button>;
 }
 "
 `;
@@ -4032,7 +4005,6 @@ export interface TextareaProps {
 export default function Textarea(props: TextareaProps) {
   return (
     <textarea
-      {...props.attributes}
       placeholder={props.placeholder}
       name={props.name}
       value={props.value}
@@ -4075,7 +4047,6 @@ export interface VideoProps {
 export default function Video(props: VideoProps) {
   return (
     <video
-      {...props.attributes}
       preload=\\"none\\"
       style={{
         width: \\"100%\\",
@@ -4329,7 +4300,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -4340,9 +4310,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </div>
@@ -4399,11 +4367,7 @@ export default function RenderContent(props: RenderContentProps) {
     };
   }
 
-  return (
-    <RenderBlock
-      {...getRenderContentProps(props.renderContentProps.block, 0)}
-    />
-  );
+  return <RenderBlock />;
 }
 "
 `;
@@ -4454,6 +4418,15 @@ export default function MultipleOnUpdateWithDeps(props: any) {
   }, [c, d]);
 
   return <div />;
+}
+"
+`;
+
+exports[`React Typescript Test multipleSpread 1`] = `
+"import * as React from \\"react\\";
+
+export default function MyBasicOutputsComponent(props: any) {
+  return <input />;
 }
 "
 `;
@@ -4751,7 +4724,6 @@ export default function Button(props: ButtonProps) {
       {props.link ? (
         <>
           <a
-            {...props.attributes}
             href={props.link}
             target={props.openLinkInNewTab ? \\"_blank\\" : undefined}
           >
@@ -4762,9 +4734,7 @@ export default function Button(props: ButtonProps) {
 
       {!props.link ? (
         <>
-          <button {...props.attributes} type=\\"button\\">
-            {props.text}
-          </button>
+          <button type=\\"button\\">{props.text}</button>
         </>
       ) : null}
     </>

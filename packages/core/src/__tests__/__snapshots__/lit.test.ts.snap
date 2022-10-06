@@ -2617,6 +2617,35 @@ export default class MultipleOnUpdateWithDeps extends LitElement {
 "
 `;
 
+exports[`Lit Javascript Test multipleSpread 1`] = `
+"import { LitElement, html, css } from \\"lit\\";
+import { customElement, property, state, query } from \\"lit/decorators.js\\";
+
+const spread = (properties) =>
+  directive((part) => {
+    for (const property in properties) {
+      const value = properties[attr];
+      part.element[property] = value;
+    }
+  });
+
+@customElement(\\"my-basic-outputs-component\\")
+export default class MyBasicOutputsComponent extends LitElement {
+  createRenderRoot() {
+    return this;
+  }
+
+  render() {
+    return html\`
+      
+      <input \${spread(props)} \${spread(attrs)} />
+
+    \`;
+  }
+}
+"
+`;
+
 exports[`Lit Javascript Test nestedShow 1`] = `
 "import { LitElement, html, css } from \\"lit\\";
 import { customElement, property, state, query } from \\"lit/decorators.js\\";
@@ -5955,6 +5984,35 @@ export default class MultipleOnUpdateWithDeps extends LitElement {
         <div></div>
 
       \`;
+  }
+}
+"
+`;
+
+exports[`Lit Typescript Test multipleSpread 1`] = `
+"import { LitElement, html, css } from \\"lit\\";
+import { customElement, property, state, query } from \\"lit/decorators.js\\";
+
+const spread = (properties) =>
+  directive((part) => {
+    for (const property in properties) {
+      const value = properties[attr];
+      part.element[property] = value;
+    }
+  });
+
+@customElement(\\"my-basic-outputs-component\\")
+export default class MyBasicOutputsComponent extends LitElement {
+  createRenderRoot() {
+    return this;
+  }
+
+  render() {
+    return html\`
+      
+      <input \${spread(props)} \${spread(attrs)} />
+
+    \`;
   }
 }
 "
