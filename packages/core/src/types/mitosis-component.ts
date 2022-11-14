@@ -61,6 +61,7 @@ export type StateValueType = 'function' | 'getter' | 'method' | 'property';
 
 export type StateValue = {
   code: string;
+  arguments?: any[];
   type: StateValueType;
   typeParameter?: string;
 };

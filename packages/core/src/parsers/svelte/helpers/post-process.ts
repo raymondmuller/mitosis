@@ -27,10 +27,11 @@ export function preventNameCollissions(
       }
     });
 
-    const isInOutput = regex().test(output);
+    const outputRegex = () => new RegExp(`\\b${key}\\b`, 'g');
+    const isInOutput = outputRegex().test(output);
 
     if (isInArguments && isInOutput) {
-      output = output.replace(regex(), `${prepend}${key}${append}`);
+      output = output.replace(outputRegex(), `${prepend}${key}${append}`);
     }
   }
 
@@ -59,6 +60,7 @@ function prependProperties(json: SveltosisComponent, input: string) {
 function prependState(json: SveltosisComponent, input: string) {
   let output = input;
   const stateKeys = Object.keys(json.state);
+
   for (const state of stateKeys) {
     const regex = new RegExp(
       `(?<!(\\.|'|"|\`|function ))\\b(state\\.)?${state}\\b(?!(\\s+)?\\()`,

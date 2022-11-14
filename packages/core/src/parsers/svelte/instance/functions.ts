@@ -61,6 +61,7 @@ export function parseFunctions(json: SveltosisComponent, node: FunctionDeclarati
 
   json.state[id.name] = {
     code,
+    arguments: (node.params || []).map((param) => generate(param)),
     type: 'function',
   };
 }
